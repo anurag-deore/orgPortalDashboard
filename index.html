@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLTI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="./calender.css">
+</head>
+
+<body>
+    <div class="sidenav">
+        <div class="sidenav_top">
+            <div class="sidenav_logobox">
+                <img src="./assets/ltilogo.png" id="logo" alt="">
+            </div>
+            <hr>
+            <div class="menu">
+                <div class="menuitem active" title="My Space">
+                    <div class="menuitem__icon">
+                        <ion-icon name="grid-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="menuitem" title="Media & Updates">
+                    <div class="menuitem__icon">
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="menuitem" title="Talent & Skills">
+                    <div class="menuitem__icon">
+                        <ion-icon name="bonfire-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="menuitem" title="Human Resources">
+                    <div class="menuitem__icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="menuitem" title="Requests & Approvals">
+                    <div class="menuitem__icon">
+                        <ion-icon name="repeat-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="menuitem" title="Project Delivery">
+                    <div class="menuitem__icon">
+                        <ion-icon name="stats-chart-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="menuitem" title="Compliance">
+                    <div class="menuitem__icon">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="menuitem" title="Sales">
+                    <div class="menuitem__icon">
+                        <ion-icon name="business-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="menuitem" title="Enablers">
+                    <div class="menuitem__icon">
+                        <ion-icon name="layers-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidenav_bottom">
+            <hr>
+            <div class="menuitem" title="Settings">
+                <div class="menuitem__icon">
+                    <ion-icon name="settings-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="header">
+            <div class="header_title">
+                <h3>Hi Anurag !</h3>
+            </div>
+            <div class="header_search">
+                <ion-icon class="search_icon" name="search-outline"></ion-icon>
+                <input class="search_input" type="search" placeholder="Search by Keyword, Application or Person">
+            </div>
+            <div class="header_actions">
+                <div class="action">
+                    <ion-icon name="notifications-outline"></ion-icon>
+                </div>
+                <div class="action">
+                    <ion-icon name="moon-outline"></ion-icon>
+                </div>
+                <div class="action">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="rowRevFlex">
+                <div class="flexShrink">
+                    <div class="card">
+                        <div class="calendar"></div>
+                    </div>
+                </div>
+                <div class="flexGrow">
+                    <div class="card">
+                        <h2>My Space</h2>
+                    </div>
+                    <div class="row">
+                        <div class="card">
+                            <div class="card_header">
+                                <ion-icon class="card_icon" name="timer-outline"></ion-icon>
+                                <div class="card_title">Attendance & Timesheet</div>
+                            </div>
+                            <div class="card_body">
+                                <canvas id="myChart" width="200" height="200"></canvas>
+                                <div class="legend">
+                                    <div class="legend_item">
+                                        <div class="legendIcon legendcolor1"></div>
+                                        <div class="legendTitle">Time on System</div>
+                                    </div>
+                                    <div class="legend_item">
+                                        <div class="legendIcon legendcolor2"></div>
+                                        <div class="legendTitle">i.Time Hrs</div>
+                                    </div>
+                                    <div class="legend_item">
+                                        <div class="legendIcon legendcolor3"></div>
+                                        <div class="legendTitle">Total LTI</div>
+                                    </div>
+                                    <div class="legend_item">
+                                        <div class="legendIcon legendcolor4"></div>
+                                        <div class="legendTitle">Regularized</div>
+                                    </div>
+                                    <div class="legend_item">
+                                        <div class="legendIcon legendcolor5"></div>
+                                        <div class="legendTitle">iMPROVE Productive</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card_header">
+                                <ion-icon class="card_icon" name="timer-outline"></ion-icon>
+                                <div class="card_title">Attendance & Timesheet</div>
+                            </div>
+                            <div class="card_body">
+                                <canvas id="myChart" width="200" height="200"></canvas>
+                                <div class="legend">
+                                    <div class="legend_item">
+                                        <div class="legendIcon legendcolor1"></div>
+                                        <div class="legendTitle">Time on System</div>
+                                    </div>
+                                    <div class="legend_item">
+                                        <div class="legendIcon legendcolor2"></div>
+                                        <div class="legendTitle">i.Time Hrs</div>
+                                    </div>
+                                    <div class="legend_item">
+                                        <div class="legendIcon legendcolor3"></div>
+                                        <div class="legendTitle">Total LTI</div>
+                                    </div>
+                                    <div class="legend_item">
+                                        <div class="legendIcon legendcolor4"></div>
+                                        <div class="legendTitle">Regularized</div>
+                                    </div>
+                                    <div class="legend_item">
+                                        <div class="legendIcon legendcolor5"></div>
+                                        <div class="legendTitle">iMPROVE Productive</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./calender.js"></script>
+    <script>
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Time on System', 'i.Time Hrs', 'Total LTI', 'Regularized', 'iMPROVE Productive'],
+                datasets: [{
+                    label: 'Logged Hours',
+                    data: [12, 19, 3, 5, 14],
+                    backgroundColor: [
+                        'rgba(41, 195, 190, 1)',
+                        'rgba(93, 98, 181, 1)',
+                        'rgba(188, 149, 223, 1)',
+                        'rgba(242, 114, 111, 1)',
+                        'rgba(255, 197, 51, 1)',
+                        'rgba(98, 181, 143, 1)',
+                    ],
+                }]
+            },
+            options: {
+                cutout: "50%",
+                radius: "80%",
+                borderRadius: 5,
+                hoverOffset: 10,
+                responsive: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                }
+            }
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

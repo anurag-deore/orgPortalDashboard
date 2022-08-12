@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-dark-1: #0F101A;
+    --bg-dark-2: #03030D;
+    --bg-dark-3: #0E101A;
+    --bg-light-1: #ffffff;
+    --bg-light-2: #F0EEF0;
+    --light-1: #F8F9FC;
+    --light-2: #A7B7DA;
+    --primary-1: #f7941e;
+    --primary-1-bg: #fdf5eb;
+    --primary-2: #0177BD;
+    --primary-2-bg: #0177BD80;
+    --primary-3: #282D86;
+    --primary-3-bg: #282D8650;
+    --dark: #1A1E25;
+    --secondary: #282D86;
+    --radius: 12px;
+    --radius-2: 8px;
+    --title-font: 'Space Grotesk', sans-serif;
+    --regular-font: "Rubik"
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#chartdiv {
+    width: 100%;
+    height: 500px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+}
+
+body {
+    background-color: var(--bg-light-2);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-family: var(--regular-font);
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+hr {
+    height: 1px;
+    background-color: var(--bg-light-2);
+    border: none;
+}
+
+/* - - - - - - - - SIDE NAV STYLES - - - - - - - - - - - */
+.sidenav {
+    min-height: 100vh;
+    background-color: var(--bg-light-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid var(--bg-light-2);
+}
+
+.sidenav #logo {
+    width: 40px;
+}
+
+.sidenav .sidenav_logobox {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidenav .menuitem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 15px 0px;
+    padding: 0px 20px;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+
+.sidenav .menuitem__icon {
+    padding: 12px;
+    border-radius: var(--radius);
+    color: var(--secondary);
+    position: relative;
+}
+
+.sidenav .menuitem:hover>.menuitem__icon {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px 0px;
+    background-color: var(--primary-1-bg);
+    color: var(--primary-1);
+}
+
+ion-icon {
+    pointer-events: none;
+}
+
+.sidenav .menuitem:hover::before {
+    position: absolute;
+    left: 90%;
+    content: attr(title);
+    top: 15%;
+    background-color: var(--primary-1-bg);
+    color: var(--primary-1);
+    border-radius: var(--radius);
+    z-index: 2;
+    width: max-content;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.sidenav .menuitem.active::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    content: "";
+    height: 40px;
+    border-right: 3px solid var(--primary-1);
+}
+
+.sidenav .menuitem.active>.menuitem__icon {
+    color: var(--primary-1);
+}
+
+
+.sidenav .menuitem__icon ion-icon {
+    font-size: 35px;
+}
+
+.sidenav .menuitem__text {
+    font-size: 20px;
+}
+
+/* - - - - - - - - SIDE NAV STYLES END - - - - - - - - - - - */
+/* - - - - - - - - HEADER STYLES - - - - - - - - - - - */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-light-1);
+    padding: 10px 0px;
+}
+
+.header_title {
+    margin: 0px 40px;
+    font-size: 20px;
+    color: var(--primary-3);
+    font-family: var(--title-font) !important;
+}
+
+.header_search {
+    margin-right: 20px;
+    display: flex;
+    border-radius: var(--radius-2);
+}
+
+.search_input {
+    border: none;
+    width: 600px;
+    font-family: inherit;
+    background-color: var(--light-1);
+    border-radius: var(--radius-2);
+    font-size: 18px;
+    padding: 10px 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.search_input:focus {
+    outline: none;
+}
+
+.header_search:focus-within {
+    outline: 1px solid var(--primary-3-bg);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.search_input::placeholder {
+    color: var(--light-2);
+}
+
+.search_icon {
+    padding: 10px;
+    border: none;
+    background-color: var(--light-1);
+    color: var(--secondary);
+    font-size: 30px;
+    border-radius: var(--radius-2);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.header_actions {
+    display: flex;
+}
+
+.header_actions .action {
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.header_actions .action ion-icon {
+    align-items: center;
+    font-size: 30px;
+    margin: 0px 10px;
+}
+
+/* - - - - - - - - HEADER STYLES END - - - - - - - - - - - */
+
+/* - - - - - - - - UTIL STYLES - - - - - - - - - - - */
+.rowRevFlex {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexGrow {
+    flex-grow: 1;
+}
+
+.flexShrink {
+    flex-shrink: 1;
+}
+
+/* - - - - - - - - UTIL STYLES END - - - - - - - - - - - */
+
+/* - - - - - - - - CARD STYLES  - - - - - - - - - - - */
+.card {
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--bg-light-1);
+    color: var(--dark);
+    border-radius: var(--radius);
+    height: fit-content;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
+}
+
+
+.card_header {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    border-bottom: 1px solid var(--bg-light-2);
+    /* background-color: #0071d420; */
+    color: #0071d4;
+    border-radius: var(--radius);
+    padding: 10px;
+}
+
+.card_title {
+    margin-right: 5px;
+    font-weight: bold;
+    font-family: var(--title-font);
+    font-size: 20px;
+}
+
+.card_icon {
+    margin-right: 5px;
+    font-size: 30px;
+}
+
+.card_body {
+    display: flex;
+    padding: 10px;
+}
+
+/* - - - - - - - - CARD STYLES END - - - - - - - - - - - */
+.legend_item {
+    display: flex;
+    margin: 20px 0px;
+}
+
+.legendIcon {
+    height: 20px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: var(--radius);
+}
+
+.legendcolor1 {
+    background-color: rgba(41, 195, 190, 1);
+}
+
+.legendcolor2 {
+    background-color: rgba(93, 98, 181, 1);
+}
+
+.legendcolor3 {
+    background-color: rgba(188, 149, 223, 1);
+}
+
+.legendcolor4 {
+    background-color: rgba(242, 114, 111, 1);
+}
+
+.legendcolor5 {
+    background-color: rgba(255, 197, 51, 1);
+}
+
+.legendcolor6 {
+    background-color: rgba(98, 181, 143, 1);
+}
